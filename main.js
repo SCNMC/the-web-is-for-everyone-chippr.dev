@@ -10,13 +10,39 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
+   
+//fetch api project data//
 app.get('/', (req, res) => {
-    // res.send('Hallo wereld!')
-    res.render('index', {
-      title: 'Dit is een index uit EJS',
+    fetchJson("https://chipr.api.fdnd.nl/v1/project").then(function (jsonData) {
+        res.render('index', {
+          title: 'Dit is de chippr api',
+          projects: jsonData.data,
+        })
+      })
     })
 
-})
+    // get detail page id//
+
+    app.get("/:id", (req, res) => {
+        fetchJson(`https://chipr.api.fdnd.nl/v1/project/${req.params.id}`).then(
+          function (jsonData) {
+            res.render("detail", {
+              project: jsonData.data[0],
+            });
+          }
+        );
+      });
+
+
  app.listen(process.env.PORT || 3000, () => console.log(`App avaialble on http://localhost:3000`))
 
-
+/**
+ * Wraps the fetch api and returns the response body parsed through json
+ * @param {*} url the api endpoint to address
+ * @returns the json response from the api endpoint
+ */
+ async function fetchJson(url) {
+    return await fetch(url)
+      .then((response) => response.json())
+      .catch((error) => error)
+  }

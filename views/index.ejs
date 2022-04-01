@@ -107,28 +107,14 @@
         <!-- Customers Cards Wrapper -->
         <ul class="customers-cards-wrapper">
             <div class="customers-cards-wrapper-sticky">
-
-                <!-- Beyco Card -->
-                <li>
-                    <img src="assets/images/beyco-logo.svg" alt="Logo van bedrijf Beyco">
-                    <p>Beyco brengt koffie koper en verkopers samen en maakt de keten inzichtelijk.</p>
-                    <a href="">Bekijk klant</a>
-                </li>
-
-                <!-- Orbisk Card -->
-                <li>
-                    <img src="assets/images/orbisk-logo.svg" alt="Logo van bedrijf Orbisk">
-                    <p>Orbisk helpt professionele keukens grip te krijgen op hun voedselverspilling.</p>
-                    <a href="">Bekijk klant</a>
-                </li>
-
-                <!-- FullCharge Card -->
-                <li>
-                    <img src="assets/images/fullcharge-logo-transparent.png" alt="Logo van bedrijf FullCharge">
-                    <p>FullCharge helpt mensen en bedrijven om te werken aan dagelijkse groei door het inbouwen van
-                        simpele en leuke routines.</p>
-                    <a href="">Bekijk klant</a>
-                </li>
+                <% projects.forEach(project => { %>
+                    <li>
+                      <% project.name %>
+                      <img src="<%= project.logo %>" />
+                      <p><%= project.short_description %></p>
+                      <a href="/<%- project.id %>">Bekijk project</a>
+                    </li>
+                <% }) %>
             </div>
         </ul>
     </section>
