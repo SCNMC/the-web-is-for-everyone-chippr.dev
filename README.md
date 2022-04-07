@@ -1,7 +1,8 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Titel
-The web is for everyone!
+# The web is for everyone!
+<img width="1438" alt="Schermafbeelding 2022-04-07 om 19 53 46" src="https://user-images.githubusercontent.com/90189750/162266356-3fdc4fc9-9271-477a-bdb5-f18c96a47f44.png">
+
 
 ## Inhoudsopgave
 
