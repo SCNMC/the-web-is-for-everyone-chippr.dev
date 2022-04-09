@@ -1,6 +1,6 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# The web is for everyone!
+# 🦖The web is for everyone!
 <img width="1438" alt="Schermafbeelding 2022-04-07 om 19 53 46" src="https://user-images.githubusercontent.com/90189750/162266356-3fdc4fc9-9271-477a-bdb5-f18c96a47f44.png">
 
 
@@ -13,15 +13,23 @@
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Beschrijving
+## 📘Beschrijving
 Veel sites worden op de client gerenderd, maar wat als Javascript het niet meer doet? doet je website het dan nogsteeds of niet? 
-Voor deze opdracht was het van belang dat we server side gaan renderen. Dit word gedaan met Node.js. De afbeelding die je aan het begin ziet is afkomstig van de overzichtspagina van Chippr. De projecten die hier worden weergeven zijn afkomstig vanuit een API en 
+Voor deze opdracht was het van belang dat we server side gaan renderen. Dit word gedaan met Node.js. De afbeelding die je aan het begin ziet is afkomstig van de overzichtspagina van Chippr. De projecten die hier worden weergeven zijn afkomstig vanuit een API en de detailpage die hieraan gelinkt is ook. Dezd 2 pagina worden server side gerenderd door middel van Node.js, EJS en express.
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
-## Kenmerken
+## 💡Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+De volgende kenmerken heb ik gebruikt om deze pagina tot stand te brengen met een voorbeeld voor extra toevoeging:
+
+### Node
+### Express
+<img width="350" alt="Schermafbeelding 2022-04-09 om 16 38 18" src="https://user-images.githubusercontent.com/90189750/162578854-01e790e2-7e25-467d-99a3-73b8906b9a13.png">
+
+### EJS
+
 
 ## Installatie
 
