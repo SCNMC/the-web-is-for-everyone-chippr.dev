@@ -26,17 +26,69 @@ De volgende kenmerken heb ik gebruikt om deze pagina tot stand te brengen met ee
 
 ### Node
 ### Express
-<img width="350" alt="Schermafbeelding 2022-04-09 om 16 38 18" src="https://user-images.githubusercontent.com/90189750/162578854-01e790e2-7e25-467d-99a3-73b8906b9a13.png">
+```
+
+const app = express()
+const port = 3000
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
+
+
+//serve public files n
+app.use(express.static('public'))
+
+// hook up template engine 
+app.set('view engine', 'ejs')
+app.set('views', './views')
+
+   
+//fetch api project data//
+app.get('/', (req, res) => {
+    fetchJson("https://chipr.api.fdnd.nl/v1/project").then(function (jsonData) {
+        res.render('index', {
+          title: 'Dit is de chippr api',
+          projects: jsonData.data,
+        })
+      })
+    })
+
+    // get detail page id//
+
+    app.get("/:id", (req, res) => {
+        fetchJson(`https://chipr.api.fdnd.nl/v1/project/${req.params.id}`).then(
+          function (jsonData) {
+            res.render("detail", {
+              project: jsonData.data[0],
+            });
+          }
+        );
+      });
+```
+Dit is een voorbeeld van code die in express die ik heb gebruikt om deze opdracht te realiseren.
 
 ### EJS
-
+```
+ <ul class="customers-cards-wrapper">
+            <div class="customers-cards-wrapper-sticky">
+                <% projects.forEach(project => { %>
+                    <li>
+                      <% project.name %>
+                      <img src="<%= project.logo %>"/>
+                      <p><%= project.short_description %></p>
+                      <a href="/<%- project.id %>">Bekijk project</a>
+                    </li>
+                <% }) %>
+            </div>
+        </ul>
+    </section>
+```
+Dit stukje code komt uit de index.ejs bestand. Hierin laat ik de propjecten zien van Chippr die afkomstif zijn uit de API. Wanneer je op "bekijk project" klikt dan zal je doorgestuurd worden naar de detailpage.
 
 ## Installatie
 
 ## Gebruik
 
 ## Bronnen
-
+   
 ## Licentie
 
 ![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
