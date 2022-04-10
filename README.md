@@ -83,11 +83,11 @@ Dit is een voorbeeld van code die in express die ik heb gebruikt om deze opdrach
 ```
 Dit stukje code komt uit de index.ejs bestand. Hierin laat ik de propjecten zien van Chippr die afkomstif zijn uit de API. Wanneer je op "bekijk project" klikt dan zal je doorgestuurd worden naar de detailpage.
 
-## Installatie
+## 💻Installatie
 
-## Gebruik
+## ✔️Gebruik
 
-## Bronnen
+## 📃Bronnen
    
 ## Licentie
 
